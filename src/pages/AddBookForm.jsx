@@ -27,7 +27,7 @@ export default function AddBook() {
   };
 
   return (
-    <div style={{ margin: "3rem" }}>
+    <div style={{marginLeft: "16rem"}}>
       <h2>Add Book</h2>
 
       {success && (
