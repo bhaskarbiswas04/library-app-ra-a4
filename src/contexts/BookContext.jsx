@@ -26,13 +26,13 @@ const initialBooksData = [
 ];
 
 export function BookProvider({ children }) {
-  // Load from localStorage OR fallback to initial books
+  // Load from localStorage show initial books
   const [books, setBooks] = useState(() => {
     const saved = localStorage.getItem("books");
     return saved ? JSON.parse(saved) : initialBooksData;
   });
 
-  // Save to localStorage whenever "books" changes
+  // Save to localStorage
   useEffect(() => {
     localStorage.setItem("books", JSON.stringify(books));
   }, [books]);

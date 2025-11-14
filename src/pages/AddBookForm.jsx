@@ -7,18 +7,15 @@ export default function AddBook() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [status, setStatus] = useState("unread");
-  const [success, setSuccess] = useState(""); // <-- SUCCESS MESSAGE
+  const [success, setSuccess] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const newBook = { title, author, status };
     addBook(newBook);
-
-    // Show success message
     setSuccess("Book added successfully!");
 
-    // Hide success message after 2 seconds
     setTimeout(() => {
       setSuccess("");
     }, 2000);
@@ -33,7 +30,6 @@ export default function AddBook() {
     <div style={{ margin: "3rem" }}>
       <h2>Add Book</h2>
 
-      {/* SUCCESS MESSAGE */}
       {success && (
         <p
           style={{
