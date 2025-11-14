@@ -62,5 +62,6 @@ export function BookProvider({ children }) {
   );
 }
 
+//Custom hook context for global state.
 const useBookContext = () => useContext(BookContext);
 export default useBookContext;

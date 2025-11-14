@@ -56,7 +56,7 @@ export default function ViewBooks() {
               </button>
               <button
                 onClick={() => deleteBook(book.title)}
-                style={{ marginLeft: "10px" }}
+                style={{ marginLeft: "10px", backgroundColor: "#ff6666" }}
               >
                 Delete
               </button>
